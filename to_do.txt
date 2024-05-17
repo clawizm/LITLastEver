@@ -1,0 +1,26 @@
+To Do Today 3-26-2024:
+   ✔️(Needs Testing) - Update the Object Detection models to calculate the focal length when initalized
+    - Update server to have the ability to crash and restart without relaunching program
+   ✔️(Needs Testing) - Update creating multiple processing to be cleaner and smoother, by having a power seamless way to create object detection models 
+    - Test GPU vs CPU vs edge TPU inference times
+    - Train a hand gesture model
+    - https://github.com/NobuoTsukamoto/tflite-cv-example/blob/master/utils/tflite_util.py #for creating interpreter with TPU
+    - https://github.com/pvys/CV-camera-finder #camerafinder
+    
+
+This week:
+    - Have a way to automatically connect systems
+    - perform more training on hand gestures
+    - Consider removing open and close from the training data, as well as retraining the model without those labels
+    - update hand gesture events that update checkboxs to just invert current status
+    - Update the turning off and on of video feeds/autonomous mode to select an image from a random image in the BackgroundImages directory.
+    - Find consisent delay to ensure background image gets updated when turning off camera feed.
+
+Once everything works:
+    - Add checkbox showing server connection status, and if server breaks we want to restart server on pi, and then retry to connect to server on computer. If its successful we will update checkbox and disable it.
+   
+   ✔️(Decieded to just run indefinitely) - We Don't want the server to break out of its retry Loop Until GUI is killed.
+    ✔️(Decieded to just run indefinitely)- We could possibly add option on GUI to keep server running indefinitely. Like a main killswitch hidden somewhere.
+   ✔️(Needs Testing) - While the auto detect is runnining, we should send events only from auto detect, but update values stored in the manual info sections on the fly. That way the auto detect method can call the send data method
+    ✔️ (Tested)- Update LED Range creation in Gui to start new line if it gets past a certain length or number of items.
+
